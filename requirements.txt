@@ -24,3 +24,4 @@ gunicorn==21.2.0
 hybrid==1.2.3
 asgiref==3.6.0
 appdirs==1.4.4
+whitenoise==6.5.0
