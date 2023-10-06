@@ -1,5 +1,5 @@
 from rest_framework import status
-from rest_framework import viewsets
+from rest_framework import viewsets, serializers
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 import requests
@@ -24,7 +24,7 @@ class RecomendationViewset(viewsets.ModelViewSet):
       queryset = None
       queryset2 = None
       def get_serializer_class(self):
-        return None
+        return serializers.Serializer
       
       def GetJob(self,url):
           while self.start < self.total_jobs:
