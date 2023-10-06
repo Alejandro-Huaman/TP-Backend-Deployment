@@ -23,6 +23,8 @@ class RecomendationViewset(viewsets.ModelViewSet):
       data = []
       queryset = None
       queryset2 = None
+      def get_serializer_class(self):
+        return None
       
       def GetJob(self,url):
           while self.start < self.total_jobs:
