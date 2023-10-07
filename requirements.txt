@@ -8,7 +8,7 @@ djangorestframework_simplejwt==5.2.2
 django-cors-headers==4.0.0
 drf_yasg==1.21.5
 openai==0.27.8
-pandas
+pandas==1.4.4
 Requests==2.31.0
 scikit_learn
 scikit_surprise==1.1.3
