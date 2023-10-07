@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -126,7 +125,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sys',
+        'USER': 'admin',
+        'PASSWORD': 'admin123',
+        'HOST': 'database-1.ceyktdivclng.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',  
+    }
 }
 
 
@@ -177,11 +183,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'xskulldragon@gmail.com'
 EMAIL_HOST_PASSWORD = 'hddwlesdqqhqinbu'
 AUTH_USER_MODEL = 'user.User'
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200",
-    "http://localhost:3000",
-    
-]
+CORS_ALLOW_ALL_ORIGINS = True
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
