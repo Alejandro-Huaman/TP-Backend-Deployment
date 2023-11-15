@@ -130,7 +130,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'admin2',
         'PASSWORD': 'admin123',
-        'HOST': 'database-2.ceyktdivclng.us-east-1.rds.amazonaws.com',
+        'HOST': 'jobbrainprofile.ceyktdivclng.us-east-1.rds.amazonaws.com',
         'PORT': '5432',  
     }
 }

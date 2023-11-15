@@ -1,0 +1,32 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image":{
+        "Name": "giusencito/jobbrainprofile",
+        "Update": "true"
+    },
+    "Ports":[
+        {
+           "ContainerPort":"8000"
+        }
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
